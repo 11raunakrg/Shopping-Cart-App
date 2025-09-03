@@ -20,7 +20,7 @@ const Navbar = () => {
             </h3>
           </Link>
           <div>
-            <h1 className="text-green-900 text-3xl font-bold ">
+            <h1 className="text-green-700 text-3xl font-bold ">
               REACT REDUX SHOPPING CART APP
             </h1>
           </div>
