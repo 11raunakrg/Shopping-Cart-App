@@ -20,8 +20,8 @@ const Cart = () => {
   return (
     <>
       {cart.items.length > 0 ? (
-        <div>
-          <div className="min-h-[80vh] grid md:grid-cols-2 max-w-6xl mx-auto">
+        <div className="min-h-[80vh]">
+          <div className="min-h-[50vh] grid md:grid-cols-2 max-w-6xl mx-auto">
             <div className="flex flex-col items-center justify-center p-3">
               {cart.items.map((cartItem) => (
                 <CartTile key={cartItem.id} cartItem={cartItem} />

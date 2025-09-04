@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Circles } from "react-loader-spinner";
 import ProductTile from "../components/header/productTile";
+
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -11,7 +12,6 @@ const Home = () => {
     setLoading(true);
     try {
       const res = await axios.get("https://fakestoreapi.com/products");
-      // console.log(res.data);
       setProducts(res.data);
       setLoading(false);
     } catch (error) {
@@ -23,7 +23,6 @@ const Home = () => {
   useEffect(() => {
     fetchListOfProducts();
   }, []);
-  // console.log(products);
 
   return (
     <>

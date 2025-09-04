@@ -33,7 +33,9 @@ const ProductTile = ({ product }) => {
       <div className="flex items-center justify-center w-full mt-3">
         <button
           onClick={isInCart ? handleRemoveFromCart : handleAddToCart}
-          className="text-lg font-bold bg-black text-white rounded-lg px-3 py-2 hover:bg-green-700 cursor-pointer"
+          className={`text-lg font-bold ${
+            isInCart ? "bg-green-700" : "bg-red-700"
+          } text-white rounded-lg px-3 py-2 hover:bg-green-700 cursor-pointer`}
         >
           {isInCart ? "Remove from Cart" : "Add to Cart"}
         </button>
